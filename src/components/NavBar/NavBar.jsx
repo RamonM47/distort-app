@@ -52,7 +52,7 @@ const NavBar = ({ user, handleLogout }) => {
 						</p>
 					</div>
 					<div class='nav'>
-							<p class = 'mvs'>
+							<p class = 'mv'>
 								<Link to="/movies">Movies</Link>
 							</p>
 							<p class = 'msc'>

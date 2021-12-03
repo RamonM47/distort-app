@@ -1,0 +1,55 @@
+.profilecard {
+    margin: auto;
+    width: 50%;    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1 1fr 1fr ;
+    height: fit-content;
+}
+
+.pfcard {
+    background-color: aqua;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 10px;
+
+}
+
+.hello {
+    grid-area:auto;
+    grid-column: 1/6;
+    background-color: lavender;
+    
+}
+
+.mvlst {
+
+}
+
+.mclst {
+
+}
+.pdlst {
+
+}
+
+.fdlst {
+
+}
+
+img {
+    margin: auto;
+    
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+}
+
+.name {
+    
+}
+
+
+
