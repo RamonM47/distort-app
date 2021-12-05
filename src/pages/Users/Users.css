@@ -1,10 +1,10 @@
 .profilecard {
-    margin: auto;
-    width: 50%;    
+    margin: 0 100px 0 100px;    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1 1fr 1fr ;
     height: fit-content;
+    
 }
 
 .pfcard {
@@ -14,7 +14,7 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     margin: 10px;
-
+    max-width: 275px;
 }
 
 .hello {
@@ -41,7 +41,6 @@
 
 img {
     margin: auto;
-    
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     
@@ -49,4 +48,8 @@ img {
 
 .name {
     
+}
+
+#root {
+    justify-content: center;
 }

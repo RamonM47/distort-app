@@ -5,17 +5,17 @@ import styles from './Users.css'
 const Users = () => {
   const [users, setUsers] = useState([])
 
-  useEffect(()=> {
+  useEffect(() => {
     userService.getAllUsers()
-    .then(users => setUsers(users))
+      .then(users => setUsers(users))
   }, [])
 
   return (
-     <div class= 'profilecard'>
+    <div class='profilecard'>
       <h1 class='hello'>Hello.  This is a list of all the users.</h1>
-      {users.length ? 
+      {users.length ?
         <>
-          {users.map(user=>
+          {users.map(user =>
             <div class='pfcard'>
               <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwwUXumi2-4L46JVm7bryAzGyWCD1SHYLfIw&usqp=CAU'></img>
               <h2 class='name' key={user._id}>{user.name}</h2>
@@ -25,8 +25,8 @@ const Users = () => {
               <h3 class='fdlst'>Followers (0)</h3>
             </div>
           )}
-      </>
-      :
+        </>
+        :
         <p>An error occured</p>
       }
     </div>
