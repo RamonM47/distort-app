@@ -1,5 +1,5 @@
+import SuggestionResults from '../../components/SuggestionResults/SuggestionResults'
 import styles from './Music.css'
-import AddMusic from '../../components/AddSuggestion/AddSuggestion'
 
 const Music = ({ user, suggestions }) => {
     return (
@@ -10,14 +10,7 @@ const Music = ({ user, suggestions }) => {
                 </h1>
             </main>
             <body>
-            {suggestions?.Similar?.Results.map(suggestion =>
-            <>
-                <div>
-                    <p>{suggestion.Name}</p>
-                    <AddMusic suggestion={suggestion}/>
-                </div>
-            </>  
-            )}
+                <SuggestionResults />
             </body>
         </>
     )
@@ -26,5 +19,3 @@ const Music = ({ user, suggestions }) => {
 export default Music
 
 
-//map the result to a div
-//each div, map info inside the result (name, descriptions)[suggestionData.name]

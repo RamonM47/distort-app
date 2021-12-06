@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getSuggestions } from '../../services/apiService'
 import Music from '../../pages/Music/Music'
+import SuggestionResults from '../SuggestionResults/SuggestionResults'
 
 
 const SearchForm = (props) => {
@@ -63,7 +64,6 @@ const [suggestions, setSuggestions] = useState([])
           Get Suggestions
         </button>
     </form>
-    <Music suggestions={suggestions} />
     </>
   );
 }

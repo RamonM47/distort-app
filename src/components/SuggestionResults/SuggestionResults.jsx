@@ -1,18 +1,17 @@
-// import React, { useState } from 'react'
-// import { Link, useNavigate } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
-// const suggestionResults = (props) => {
+const SuggestionResults = (props) => {
 
-//     const results
 
-//     return ( 
-//         <>
-//             <h2>
-//                 These are some {} suggestions
-//             </h2>
-//         </>
+    return ( 
+        <>
+            <h2>
+                I am the suggestionResults component
+            </h2>
+        </>
 
-//     );
-// }
+    );
+}
 
-// export default suggestionResults
+export default SuggestionResults
