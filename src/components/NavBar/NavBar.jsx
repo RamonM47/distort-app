@@ -13,7 +13,7 @@ const NavBar = ({ user, handleLogout }) => {
 								<Link to="/">Distort</Link>
 							</p>
 							<p class = 'welcome'>
-								Welcome, <Link to="/profile">{user.name}</Link>
+								Welcome, <Link to="/profile" state={user}>{user.name}</Link>
 							</p>
 							<p class = 'users'>
 								<Link to="/users">Users</Link>
