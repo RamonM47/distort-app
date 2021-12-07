@@ -10,7 +10,7 @@ const Music = ({ user, suggestions }) => {
                 </h1>
             </main>
             <body>
-                <SuggestionResults />
+                <SuggestionResults SuggestionResults={SuggestionResults} />
             </body>
         </>
     )
