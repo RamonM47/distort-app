@@ -35,7 +35,7 @@ const user = location.state
             {loggedInUser.profile === user.profile ? 
             <form
             > 
-            {<Link to="/create-list" ><button>Create List</button></Link>}
+            {<Link to="/create-list-form" ><button>Create List</button></Link>}
             </form>
             :
             ''
