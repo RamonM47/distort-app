@@ -7,7 +7,7 @@ const List = (props) => {
   const [formData, setFormData] = useState({
     name: '',
     description: '',
-    createdBy: ''
+    createdBy: props.user.profile
   })
   
 
@@ -21,10 +21,7 @@ const List = (props) => {
   const handleSubmit = async e => {
     e.preventDefault()
     try {
-      setFormData({
-        ...formData, [e.target.name]: e.target.value
-        
-    })
+        createList(formData)
     
     } catch (err) {
       console.log(err)

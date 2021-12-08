@@ -1,5 +1,5 @@
-function createList(name, description) {
-
+function createList(listData) {
+  return console.log(listData)
 }
 
 export{
