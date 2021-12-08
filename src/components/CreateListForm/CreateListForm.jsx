@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { createList } from '../../services/listService'
 
 
 const List = (props) => {
   const [formData, setFormData] = useState({
     name: '',
     description: '',
-    createdBy: '',
-    lists: ''
+    createdBy: ''
   })
   
 
@@ -23,6 +23,7 @@ const List = (props) => {
     try {
       setFormData({
         ...formData, [e.target.name]: e.target.value
+        
     })
     
     } catch (err) {
