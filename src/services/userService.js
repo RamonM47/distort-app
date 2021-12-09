@@ -8,6 +8,12 @@ function getAllUsers() {
   .then(res => res.json())
 }
 
+function populateUser(userId) {
+  return fetch(`${BASE_URL}/${userId}`)
+  .then(res => res.json())
+}
+
 export {
+  populateUser,
   getAllUsers
 }

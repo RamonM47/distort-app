@@ -24,12 +24,10 @@ const Users = (props) => {
               <div class='pfcard'>
                 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwwUXumi2-4L46JVm7bryAzGyWCD1SHYLfIw&usqp=CAU'></img>
                 <h2 class='name' key={user._id}>
-              {<Link to="/profile" state={user}>{user.name}</Link>}</h2>
-                <h2 class='mvlst' >List of Movies</h2>
-                <h2 class='mclst'>List of Music</h2>
-                <h2 class='pdlst'>List of Podcasts</h2>
+              {<Link to="/profile" state={user.profile}>{user.name}</Link>}</h2>
+                <h2 class='mvlst' >Lists: {user.profile?.lists.length}</h2>
                 <h3 class='fdlst'>Followers (0)</h3>
-                {props.loggedInUser.profile === user.profile ? '' :
+                {props.loggedInUser.profile === user.profile._id ? '' :
 
                   <FollowForm userToFollow={user._id} userFollowing={props.loggedInUser.profile} />
                 }

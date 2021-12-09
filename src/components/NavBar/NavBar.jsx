@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import * as userService from '../../services/userService'
 import { Link } from 'react-router-dom'
 import  './NavBar.css'
 import SearchForm from '../SearchForm/SearchForm'
 
 const NavBar = ({ user, handleLogout }) => {
+	const [userToPopulate, setUserToPopulate] = useState({})
+	useEffect(() => {
+		userService.populateUser(user._id)
+		.then(populatedUser => setUserToPopulate(populatedUser))
+	}, [])
 	return (
 		<>
 			{user ? (
@@ -13,7 +19,7 @@ const NavBar = ({ user, handleLogout }) => {
 								<Link to="/">Distort</Link>
 							</p>
 							<p class = 'welcome'>
-								Welcome, <Link to="/profile" state={user}>{user.name}</Link>
+								Welcome, <Link to="/profile" state={userToPopulate.profile}>{user.name}</Link>
 							</p>
 							<p class = 'users'>
 								<Link to="/users">Users</Link>

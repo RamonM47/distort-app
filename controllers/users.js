@@ -3,7 +3,14 @@ import { List } from '../models/list.js'
 
 function index(req, res) {
   User.find({})
+  .populate('profile')
   .then(users => res.json(users))
+}
+
+function show(req, res) {
+  User.findById(req.params.id)
+  .populate('profile')
+  .then(populateUser => res.json(populateUser))
 }
 
 function createList(req, res) {
@@ -34,6 +41,7 @@ function addFollower(req, res) {
 
 export {
   index,
+  show,
   createList,
   addFollower
 }
