@@ -7,9 +7,7 @@ const profileSchema = new mongoose.Schema(
     avatar: String,
     following: [{type: mongoose.Schema.Types.ObjectId, ref: "Profile"}],
     followers: [{type: mongoose.Schema.Types.ObjectId, ref: "Profile"}],
-    musicList: [{type: mongoose.Schema.Types.ObjectId, ref: "Suggestion"}],
-    movieList: [{type: mongoose.Schema.Types.ObjectId, ref: "Suggestion"}],
-    podcastList: [{type: mongoose.Schema.Types.ObjectId, ref: "Suggestion"}],
+    lists: [{type: mongoose.Schema.Types.ObjectId, ref: "List"}]
   },
   {
     timestamps: true,
