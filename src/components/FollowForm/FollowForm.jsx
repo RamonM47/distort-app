@@ -1,7 +1,9 @@
+import { set } from 'mongoose'
 import React, { useState } from 'react'
+import * as followService from '../../services/followService'
 
 const FollowForm = (props) => {
-    const [formData, setformData] = useState({
+    const [followData, setFollowData] = useState({
         userToFollow: '',
         userFollowing: ''
     })
@@ -9,7 +11,10 @@ const FollowForm = (props) => {
     const handleSubmit = e => {
         e.preventDefault()
         try {
-            
+        setFollowData({
+            userToFollow: props.userToFollow,
+            userFollowing: props.userFollowing})
+            followService.follow(followData)
         } catch (err) {
             console.log(err)
         }

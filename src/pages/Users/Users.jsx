@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import * as userService from '../../services/userService'
 import './Users.css'
-import { follow } from '../../services/followService';
 import FollowForm from '../../components/FollowForm/FollowForm';
 import { Link } from 'react-router-dom';
 
@@ -29,13 +28,13 @@ const Users = (props) => {
                 <h3 class='fdlst'>Followers (0)</h3>
                 {props.loggedInUser.profile === user.profile._id ? '' :
 
-                  <FollowForm userToFollow={user._id} userFollowing={props.loggedInUser.profile} />
+                  <FollowForm userToFollow={user.profile} userFollowing={props.loggedInUser.profile} />
                 }
             </div>
           )}
         </>
         :
-        <p>An error occured</p>
+        <p>Loading...</p>
       }
     </div>
   );

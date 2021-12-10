@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Profile = ({loggedInUser}) => {
 const location = useLocation()
-const user = location.state 
+const user = location.state
 
     return (
         <>
@@ -23,7 +23,7 @@ const user = location.state
             <h2>
             Followers: {user.followers}
             </h2>
-            <h2>{loggedInUser.profile === user._id ? 'My ' : 'Their '} </h2>
+            <h2>{loggedInUser.profile === user._id ? 'My ' : 'Their '} {user.lists.length} </h2>
             {loggedInUser.profile === user._id ? 
             <form
             > 

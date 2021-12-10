@@ -12,6 +12,6 @@ router.use(decodeUserFromToken)
 router.get('/', checkAuth, usersCtrl.index)
 router.get('/:id', usersCtrl.show)
 router.post('/:id/createList', usersCtrl.createList)
-router.post('/:id/follow', usersCtrl.addFollower)
+router.patch('/:id/follow', usersCtrl.addFollower)
 
 export { router }
